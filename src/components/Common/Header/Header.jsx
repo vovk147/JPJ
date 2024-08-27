@@ -38,7 +38,7 @@ const Header = () => {
                     <img src={ Logojpj } alt="Logo" />
                 </div>
                 <nav id="top-menu" className={` flex ${isActive ? 'active' : ''} ${isDropdownOpen ? 'dropdown-open' : ''}`}>
-                    <ul>
+                    <ul >
                         <li className={`menu-item ${isDropdownOpen ? 'open' : ''}`}>
                             <Link className="link" href="#offer" data-i18n="offer" onClick={toggleDropdown}>
                                 Oferta <span className={`arrow ${isDropdownOpen ? 'up' : 'down'}`}></span>
