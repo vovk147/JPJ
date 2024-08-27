@@ -36,7 +36,7 @@ const KontaktPage = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const msg = `Forma ze strony\n\nName: ${name}\nFirma: ${company}\nEmail: ${email}\nNumer: ${phone}\n\nWiadomość: ${message}`;
-        
+
         try {
             await sendData(msg);
             alert("Thank you for sending the form");
@@ -44,7 +44,6 @@ const KontaktPage = () => {
             alert("Failed to send the form. Please try again.");
         }
 
-        // Сброс формы
         setName('');
         setCompany('');
         setEmail('');
@@ -56,7 +55,8 @@ const KontaktPage = () => {
         <main>
             <section id="contact">
                 <h2>Skontaktuj się z nami</h2>
-                <p>Chcesz dowiedzieć się więcej o naszej ofercie lub masz pytania? Jesteśmy tutaj, aby Ci pomóc! Wypełnij poniższy formularz, napisz do nas na adres e-mail lub zadzwoń. Czekamy na Twój kontakt!</p>
+                <p>Chcesz dowiedzieć się więcej o naszej ofercie lub masz pytania? Jesteśmy tutaj, aby Ci pomóc! Wypełnij poniższy formularz, napisz do nas na adres e-mail lub zadzwoń.<br />
+                    Czekamy na Twój kontakt!</p>
                 <ul className="contact-info">
                     <li><strong>Adres e-mail:</strong> <a href="mailto:biuro@jpj.pl">biuro@jpj.pl</a></li>
                     <li><strong>Numer telefonu:</strong> <a href="tel:+48791121323">+48-791-121-323</a></li>
@@ -64,60 +64,60 @@ const KontaktPage = () => {
                 <form onSubmit={handleSubmit} method="post" className="contact-form">
                     <div className="form-group">
                         <label htmlFor="name">Imię i nazwisko:</label>
-                        <input 
-                            type="text" 
-                            id="name" 
-                            name="name" 
-                            placeholder="Wprowadź swoje imię i nazwisko" 
-                            value={name} 
-                            onChange={(e) => setName(e.target.value)} 
-                            required 
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Wprowadź swoje imię i nazwisko"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
                         />
                     </div>
                     <div className="form-group">
                         <label htmlFor="company">Nazwa firmy (opcjonalnie):</label>
-                        <input 
-                            type="text" 
-                            id="company" 
-                            name="company" 
-                            placeholder="Wprowadź nazwę firmy" 
-                            value={company} 
-                            onChange={(e) => setCompany(e.target.value)} 
+                        <input
+                            type="text"
+                            id="company"
+                            name="company"
+                            placeholder="Wprowadź nazwę firmy"
+                            value={company}
+                            onChange={(e) => setCompany(e.target.value)}
                         />
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Adres e-mail:</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            placeholder="Wprowadź swój adres e-mail" 
-                            value={email} 
-                            onChange={(e) => setEmail(e.target.value)} 
-                            required 
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Wprowadź swój adres e-mail"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
                         />
                     </div>
                     <div className="form-group">
                         <label htmlFor="phone">Numer telefonu:</label>
-                        <input 
-                            type="tel" 
-                            id="phone" 
-                            name="phone" 
-                            placeholder="Wprowadź numer telefonu" 
-                            value={phone} 
-                            onChange={(e) => setPhone(e.target.value)} 
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Wprowadź numer telefonu"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
                         />
                     </div>
                     <div className="form-group">
                         <label htmlFor="message">Wiadomość:</label>
-                        <textarea 
-                            id="message" 
-                            name="message" 
-                            rows="5" 
-                            placeholder="Wprowadź swoją wiadomość" 
-                            value={message} 
-                            onChange={(e) => setMessage(e.target.value)} 
-                            required 
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Wprowadź swoją wiadomość"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                            required
                         ></textarea>
                     </div>
                     <button type="submit">Wyślij</button>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Logojpj } from "../../img/image";
 import HomePage from "../../HomePage/HomePage";
 import KontaktPage from "../../KontaktPage/KontaktPage"
+import MachinePage from "../../MachinePage/MachinePage";
 
 
 const Header = () => {
@@ -54,8 +55,8 @@ const Header = () => {
                                 <li><Link className="link flex" href="#praca">Oferty pracy</Link></li>
                             </ul>
                         </li>
-                        <li><Link className="link flex" href="#park" data-i18n="park">Park Maszynowy</Link></li>
-                        <li><Link className="link flex" href="#realizations" data-i18n="realizations">Realizacje</Link></li>
+                        <li><Link className="link flex" to={"/Park"}  data-i18n="park">Park Maszynowy</Link></li>
+                        <li><Link className="link flex"  to={""} data-i18n="realizations">Realizacje</Link></li>
                         <li><Link className="link flex" to={"/"} data-i18n="about">O Nas</Link></li>
                         <li><Link className="link flex" to={"/Kontakt"} data-i18n="contact">Kontakt</Link></li>
                     </ul>

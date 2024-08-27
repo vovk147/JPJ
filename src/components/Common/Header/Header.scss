@@ -12,18 +12,18 @@ $dropdown-padding: 10px 15px;
 $burger-bar-bg-color: #333;
 $burger-bar-hover-bg-color: #000;
 $transition-speed: 0.3s;
-$dropdown-padding: 10px 15px;
 
-
-  header {
+header {
     background-color: $header-bg-color;
     color: $header-text-color;
     padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; 
+    z-index: 1000;
     transition: all $transition-speed ease;
+
+    
 
     &.scrolled {
         background-color: $header-bg-scrolled-color;
@@ -42,6 +42,7 @@ $dropdown-padding: 10px 15px;
         img {
             width: $logo-width;
             transition: transform $transition-speed ease;
+
             &:hover {
                 transform: scale(1.1) rotate(-5deg);
             }
@@ -77,6 +78,11 @@ $dropdown-padding: 10px 15px;
                     display: block;
                     transition: color $transition-speed ease;
                     position: relative;
+
+                    .flex {
+                        display: flex;
+                        flex: 1;
+                    }
 
                     &::after {
                         content: '';
@@ -126,6 +132,8 @@ $dropdown-padding: 10px 15px;
                     min-width: 200px;
                     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                     border-radius: 10px;
+
+                    
                 }
 
                 &.open .dropdown {
@@ -222,7 +230,7 @@ $dropdown-padding: 10px 15px;
             position: fixed;
             top: 60px; // Adjust this if needed to match header height
             left: 0;
-            max-height: 700px; // Make sure menu takes full screen height minus header height
+            max-height: calc(100vh - 60px); // Make sure menu takes full screen height minus header height
             opacity: 0;
             transition: opacity $transition-speed ease;
             z-index: 1000;
