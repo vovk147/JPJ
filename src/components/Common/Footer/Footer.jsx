@@ -1,62 +1,56 @@
 import "./Footer.scss";
 import { WhatsApp } from "../../img/image";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+    const { t } = useTranslation();
     const location = useLocation();
 
     return (
-        <footer>
+        <footer className="main-footer">
             <div className="container">
-                <div className="footer-columns">
-                    <div className="footer-column biuro">
-                        <h3>Dane Buira:</h3>
-                        <p>
-                            P.W.JPJ<br />
-                            ul.Zagorska 59<br />
-                            25-344 Kielce
-                        </p>
+                <div className="footer-grid">
+                    {/* Блок 1: Офис */}
+                    <div className="footer-col">
+                        <h4>{t('footer.office_title')}</h4>
+                        <p>P.W. JPJ</p>
+                        <p>{t('footer.address_office')}</p>
+                        <p>{t('footer.city_office')}</p>
                     </div>
 
-                    <div className="footer-column">
-                        <h3>Dane firmy:</h3>
-                        <p>
-                            Przedsiębiorstwo Wielobranżowe JPJ<br />
-                            Jan Paweł Jarosiński<br />
-                            ul. J.Nowaka Jeziorańskiego 63/13<br />
-                            25-432 Kielce<br />
-                            NIP 657-216-76-26
-                        </p>
+                    {/* Блок 2: Юридические данные */}
+                    <div className="footer-col">
+                        <h4>{t('footer.company_title')}</h4>
+                        <p>P.W. JPJ Jan Paweł Jarosiński</p>
+                        <p>{t('footer.address_company')}</p>
+                        <p>{t('footer.city_company')}</p>
+                        <p>NIP: 657-216-76-26</p>
                     </div>
 
+                    {/* Блок 3: Только для страницы Контакты */}
                     {location.pathname === '/Kontakt' && (
-                        <div className="footer-column">
-                            <h3>Dane wysyłkowe:</h3>
-                            <p>
-                                Przedsiębiorstwo Wielobranżowe JPJ<br />
-                                Jan Paweł Jarosiński<br />
-                                skrytka pocztowa 846<br />
-                                25-432 Kielce 23
-                            </p>
+                        <div className="footer-col">
+                            <h4>{t('footer.shipping_title')}</h4>
+                            <p>P.W. JPJ Jan Paweł Jarosiński</p>
+                            <p>{t('footer.po_box')}</p>
+                            <p>25-432 Kielce 23</p>
                         </div>
                     )}
 
-                    <div className="footer-column">
-                        <h3>Kontakt:</h3>
-                        <p>
-                            tel: <a href="tel:+48-791-121-323">+48-791-121-323</a><br />
-                            e-mail: <a href="mailto:biuro@jpj.pl">biuro@jpj.pl</a><br />
-                            <div className="WhatsApp">
-                                <img src={WhatsApp} alt="WhatsApp" />
-                                <a href="https://wa.me/+48791121323" target="_blank" rel="noopener noreferrer">
-                                    WhatsApp
-                                </a>
-                            </div>
-                        </p>
+                    {/* Блок 4: Контакты */}
+                    <div className="footer-col">
+                        <h4>{t('footer.contact_title')}</h4>
+                        <p>tel: <a href="tel:+48791121323">+48 791 121 323</a></p>
+                        <p>e-mail: <a href="mailto:biuro@jpj.pl">biuro@jpj.pl</a></p>
+                        <a href="https://wa.me/+48791121323" target="_blank" rel="noopener noreferrer" className="wa-link">
+                            <img src={WhatsApp} alt="WA" />
+                            <span>WhatsApp</span>
+                        </a>
                     </div>
                 </div>
                 <div className="footer-bottom">
-                    © Przedsiębiorstwo Wielobranżowe JPJ Jan Paweł Jarosiński - 2024
+                    <p>{t('footer.copy')}</p>
                 </div>
             </div>
         </footer>

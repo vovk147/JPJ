@@ -1,0 +1,349 @@
+{
+  "header": {
+    "home": "Strona Główna",
+    "offer": "Oferta",
+    "park": "Park Maszynowy",
+    "realizations": "Realizacje",
+    "about": "O Nas",
+    "contact": "Kontakt",
+    "services": {
+      "drilling": "Wiercenie",
+      "wells": "Studnie wiercone",
+      "pumps": "Odwierty pod pompy ciepła",
+      "exploration": "Otwory poszukiwawcze",
+      "observation": "Otwory obserwacyjne",
+      "geology": "Wiercenia geologiczne",
+      "cooperation": "Oferty współpracy",
+      "work": "Oferty pracy"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Zapraszamy do kontaktu. Chętnie odpowiemy na wszystkie pytania dotyczące naszych usług.",
+    "labels": {
+      "address": "Adres",
+      "phone": "Telefon",
+      "email": "E-mail",
+      "name": "Imię i nazwisko",
+      "company": "Nazwa firmy",
+      "message": "Wiadomość"
+      
+    },
+    "placeholders": {
+      "name": "np. Jan Kowalski",
+      "company": "np. JPJ Project Sp. z o.o.",
+      "email": "np. jan.kowalski@example.com",
+      "phone": "+48 000 000 000",
+      "message": "W czym możemy pomóc? Opisz krótko swoje zapytanie."
+    },
+    "button": "Wyślij wiadomość",
+    "errors": {
+      "required": "To pole jest wymagane",
+      "email": "Niepoprawny adres e-mail",
+      "send_error": "Błąd wysyłania. Spróbuj ponownie."
+    },
+    "success": {
+      "title": "Wysłano!",
+      "message": "Dziękujemy za kontakt. Odezwiemy się najszybciej jak to możliwe."
+    }
+  },
+  "footer": {
+    "office_title": "Dane Biura",
+    "company_title": "Dane Firmy",
+    "shipping_title": "Dane Wysyłkowe",
+    "contact_title": "Kontakt",
+    "address_office": "ul. Zagórska 59",
+    "city_office": "25-344 Kielce",
+    "address_company": "ul. J. Nowaka Jeziorańskiego 63/13",
+    "city_company": "25-432 Kielce",
+    "po_box": "Skrytka pocztowa 846",
+    "copy": "© Przedsiębiorstwo Wielobranżowe JPJ Jan Paweł Jarosiński - 2026"
+  },
+  "slider": {
+    "slide1": {
+      "title": "Profesjonalne Usługi Wiertnicze",
+      "subtitle": "Ponad 20 lat doświadczenia i setki udanych projektów.",
+      "cta": "Nasza Oferta"
+    },
+    "slide2": {
+      "title": "Nowoczesny Park Maszynowy",
+      "subtitle": "Sprzęt najwyższej klasy do każdych warunków terenowych.",
+      "cta": "Zobacz Maszyny"
+    },
+    "slide3": {
+      "title": "Gwarancja Jakości i Zaufania",
+      "subtitle": "Budujemy na solidnych fundamentach i rzetelnej pracy.",
+      "cta": "Kontakt z nami"
+    }
+  },
+  "info": {
+    "title": "O Przedsiębiorstwie JPJ",
+    "intro": "JPJ to wyspecjalizowana firma wiertnicza z wieloletnim stażem. Realizujemy zaawansowane projekty geotechniczne i geologiczne dla sektora prywatnego oraz przemysłowego.",
+    "mission_h": "Misja i cel",
+    "mission_p": "Dostarczanie precyzyjnych danych gruntowych i rozwiązań energetycznych poprzez innowacyjne technologie wiertnicze przy zachowaniu najwyższych norm bezpieczeństwa.",
+    "values_h": "Wartości korporacyjne",
+    "values_list": [
+      "Inżynierska precyzja",
+      "Terminowość",
+      "Bezpieczeństwo BHP",
+      "Ochrona środowiska"
+    ],
+    "history_h": "Doświadczenie rynkowe",
+    "history_p": "Od momentu założenia przez Jana Pawła Jarosińskiego, firma JPJ zrealizowała ponad 500 projektów wiertniczych na terenie całego kraju, stale modernizując park maszynowy.",
+    "services_h": "Główne obszary działalności",
+    "services_list": [
+      "Wiercenia geologiczne",
+      "Pompy ciepła (dolne źródła)",
+      "Piezometria i monitoring",
+      "Badania nośności gruntu"
+    ],
+    "future_h": "Rozwój i technologia",
+    "future_p": "Inwestujemy w systemy wiertnicze o obniżonej emisji hałasu i zanieczyszczeń, dostosowując się do rosnących wymagań środowiskowych UE."
+  },
+  "contlink": {
+    "question": "Masz pytania?",
+    "link": "Skontaktuj się z nami!",
+    "support": "Chętnie udzielimy wsparcia i pomożemy rozwiać wszelkie wątpliwości dotyczące Twojej inwestycji."
+  },
+  "realizations": {
+    "subtitle": "Portfolio projektów",
+    "title": "Nasze Realizacje",
+    "back": "Powrót do listy",
+    "details_btn": "Szczegóły projektu",
+    "desc_title": "Opis inwestycji",
+    "specs_title": "Informacje Techniczne",
+    "location": "Lokalizacja",
+    "category": "Kategoria",
+    "date": "Data ukończenia",
+    "status": "Status",
+    "status_val": "Zrealizowano",
+    "cta": "Zapytaj o wycenę",
+    "help_title": "Masz pytania? Skontaktuj się z nami!",
+    "help_desc": "Chętnie udzielimy wsparcia i pomożemy rozwiać wszelkie wątpliwości dotyczące Twojej inwestycji."
+  },
+  "projects": {
+    "p1": {
+      "title": "Wiercenie studni głębinowej dla zakładu przemysłowego",
+      "location": "Kielce, woj. świętokrzyskie",
+      "description": "Wykonanie profesjonalnego ujęcia wody o głębokości 85m. Projekt obejmował dobór pompy oraz instalację zbiorników hydroforowych.",
+      "category": "Studnie Wiercone",
+      "date": "Grudzień 2023"
+    },
+    "p2": {
+      "title": "Dolne źródło dla pomp ciepła – budynek biurowy",
+      "location": "Kraków, woj. małopolskie",
+      "description": "Kompleksowe wykonanie 12 odwiertów pionowych po 100m każdy. Zastosowano sondy dwururowe dla maksymalnej efektywności.",
+      "category": "Pompy Ciepła",
+      "date": "Listopad 2023"
+    },
+    "p3": {
+      "title": "Badania geotechniczne pod budowę hali logistycznej",
+      "location": "Radom, woj. mazowieckie",
+      "description": "Seryjne wiercenia badawcze oraz sondowania statyczne CPTU w celu ustalenia parametrów wytrzymałościowych podłoża pod fundamenty.",
+      "category": "Geologia",
+      "date": "Październik 2023"
+    },
+    "p4": {
+      "title": "Instalacja sieci piezometrów monitorujących",
+      "location": "Warszawa, woj. mazowieckie",
+      "description": "Wykonanie otworów obserwacyjnych w celu stałego monitoringu jakości wód podziemnych na terenie dawnego składowiska odpadów.",
+      "category": "Piezometry",
+      "date": "Wrzesień 2023"
+    },
+    "p5": {
+      "title": "Odwiert badawczy w poszukiwaniu wód termalnych",
+      "location": "Busko-Zdrój, woj. świętokrzyskie",
+      "description": "Głębokie wiercenie rozpoznawcze z pełnym rdzeniowaniem w celu analizy potencjału wód geotermalnych w regionie.",
+      "category": "Otwory Poszukiwawcze",
+      "date": "Sierpień 2023"
+    }
+  },
+  "machine_page": {
+    "title": "Park Maszynowy",
+    "subtitle": "Profesjonalny Sprzęt",
+    "power": "Moc silnika",
+    "depth": "Zastosowanie",
+    "weight": "Masa całkowita",
+    "help_title": "Masz pytania? Skontaktuj się z nami!",
+    "help_desc": "Chętnie udzielimy wsparcia i pomożemy rozwiać wszelkie wątpliwości dotyczące Twojej inwestycji."
+  },
+  "machines": {
+    "m1": {
+      "name": "Beretta T44",
+      "type": "Wiertnica Gąsienicowa",
+      "description": "Specjalistyczna wiertnica do skomplikowanych odwiertów pionowych.",
+      "power": "115 KM",
+      "depth": "Odwierty pionowe",
+      "weight": "6 500 kg"
+    },
+    "m2": {
+      "name": "ZiL-131",
+      "type": "Samochód Wiertniczy",
+      "description": "Mobilna jednostka wiertnicza idealna do pracy w ciężkim terenie.",
+      "power": "150 KM",
+      "depth": "Studnie głębinowe",
+      "weight": "10 500 kg"
+    },
+    "m3": {
+      "name": "MAN TGS 6x6",
+      "type": "Transport Ciężki",
+      "description": "Pojazd przeznaczony do transportu wiertnic и materiałów eksploatacyjnych.",
+      "power": "440 KM",
+      "depth": "Logistyka maszyn",
+      "weight": "26 000 kg"
+    },
+    "m4": {
+      "name": "Iveco Eurocargo",
+      "type": "Transport i Serwis",
+      "description": "Pojazd wsparcia technicznego przewożący osprzęt wiertniczy.",
+      "power": "220 KM",
+      "depth": "Transport osprzętu",
+      "weight": "12 000 kg"
+    },
+    "m5": {
+      "name": "Atlas Copco XAS",
+      "type": "Kompresor",
+      "description": "Wysokociśnieniowy kompresor do wiercenia metodą młotka dolnego.",
+      "power": "120 kW",
+      "depth": "Wsparcie wiercenia",
+      "weight": "2 200 kg"
+    }
+  },
+  "services": {
+    "common": {
+      "about_service": "O usłudze",
+      "why_us": "Dlaczego warto nas wybrać?",
+      "process_title": "Jak pracujemy? (Etapy)",
+      "quick_contact": "Szybki kontakt",
+      "contact_desc": "Nasi eksperci odpowiedzą na Twoje pytania w ciągu 24h."
+    },
+    "wiercenie": {
+      "title": "Wiercenie",
+      "description": "Zapewniamy profesjonalne usługi wiertnicze z wykorzystaniem nowoczesnych wiertnic Beretta i ZiL. Realizujemy zlecenia w każdych warunkach terenowych.",
+      "benefits": [
+        "Precyzja wykonania",
+        "Nowoczesny sprzęt",
+        "Doświadczona kadra",
+        "Bezpieczeństwo BHP"
+      ],
+      "steps": [
+        "Konsultacja techniczna",
+        "Przygotowanie terenu",
+        "Proces wiercenia",
+        "Dokumentacja powykonawcza"
+      ]
+    },
+    "studnie": {
+      "title": "Studnie wiercone",
+      "description": "Budujemy wydajne studnie głębinowe dla domów jednorodzinnych, rolnictwa i przemysłu. Gwarantujemy dostęp do własnego ujęcia czystej wody.",
+      "benefits": [
+        "Niezależność wodna",
+        "Wysoka wydajność ujęcia",
+        "Dobór odpowiedniej pompy",
+        "Długa żywotność studni"
+      ],
+      "steps": [
+        "Wizja lokalna",
+        "Wiercenie otworu",
+        "Montaż filtrów i obsypki",
+        "Pompowanie oczyszczające"
+      ]
+    },
+    "pompy-ciepla": {
+      "title": "Odwierty pod pompy ciepła",
+      "description": "Wykonujemy pionowe wymienniki gruntowe dla pomp ciepła. To najbardziej stabilne i efektywne źródło energii dla Twojego ogrzewania.",
+      "benefits": [
+        "Oszczędność energii",
+        "Ekologiczne rozwiązanie",
+        "Stabilność cieplna",
+        "Gwarancja szczelności"
+      ],
+      "steps": [
+        "Projekt prac geologicznych",
+        "Wykonanie odwiertów",
+        "Montaż sond pionowych",
+        "Próba szczelności i wypełnienie"
+      ]
+    },
+    "otwory-poszukiwawcze": {
+      "title": "Otwory poszukiwawcze",
+      "description": "Specjalistyczne wiercenia w celu poszukiwania surowców, wód termalnych lub rozpoznania budowy geologicznej głębokich struktur.",
+      "benefits": [
+        "Pełne rdzeniowanie",
+        "Analiza laboratoryjna",
+        "Dokładność pomiarów",
+        "Specjalistyczny sprzęт"
+      ],
+      "steps": [
+        "Analiza archiwalna",
+        "Wiercenie badawcze",
+        "Pobór próbek",
+        "Ekspertyza końcowa"
+      ]
+    },
+    "piezometry": {
+      "title": "Piezometry i otwory obserwacyjne",
+      "description": "Instalujemy sieci piezometrów do monitoringu poziomu i jakości wód podziemnych na terenach przemysłowych i składowiskach.",
+      "benefits": [
+        "Monitoring środowiskowy",
+        "Zgodność z normami",
+        "Trwałość instalacji",
+        "Profesjonalny serwis"
+      ],
+      "steps": [
+        "Projekt sieci monitoringu",
+        "Wiercenie i montaż",
+        "Zabezpieczenie głowicy",
+        "Pierwsze pomiary"
+      ]
+    },
+    "geologia": {
+      "title": "Wiercenia geologiczne",
+      "description": "Badamy grunt pod inwestycje budowlane. Wykonujemy wiercenia i sondowania, które są podstawą do bezpiecznego zaprojektowania fundamentów.",
+      "benefits": [
+        "Określenie nośności",
+        "Badania laboratoryjne",
+        "Szybka realizacja",
+        "Uprawnieni geolodzy"
+      ],
+      "steps": [
+        "Plan wierceń",
+        "Prace terenowe",
+        "Analiza gruntu",
+        "Dokumentacja geotechniczna"
+      ]
+    },
+    "wspolpraca": {
+      "title": "Oferty współpracy",
+      "description": "Zapraszamy do współpracy firmy budowlane, biura projektowe oraz inwestorów instytucjonalnych. Oferujemy podwykonawstwo w zakresie wierceń.",
+      "benefits": [
+        "Atrakcyjne warunki",
+        "Partnerstwo biznesowe",
+        "Wsparcie sprzętowe",
+        "Doświadczenie w B2B"
+      ],
+      "steps": [
+        "Kontakt",
+        "Ustalenie warunków",
+        "Podpisanie umowy",
+        "Realizacja projektów"
+      ]
+    },
+    "praca": {
+      "title": "Oferty pracy",
+      "description": "Dołącz do zespołu JPJ! Szukamy operatorów wiertnic, pomocników oraz geologów. Oferujemy stabilne zatrudnienie w rozwijającej się firmie.",
+      "benefits": [
+        "Stabilne zarobki",
+        "Szkolenia zawodowe",
+        "Nowoczesny sprzęt",
+        "Dobra atmosfera"
+      ],
+      "steps": [
+        "Przesłanie CV",
+        "Rozmowa rekrutacyjna",
+        "Dzień próbny",
+        "Zatrudnienie"
+      ]
+    }
+  }
+}

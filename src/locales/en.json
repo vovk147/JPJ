@@ -1,0 +1,348 @@
+{
+  "header": {
+    "home": "Home",
+    "offer": "Offer",
+    "park": "Machinery",
+    "realizations": "Realizations",
+    "about": "About Us",
+    "contact": "Contact",
+    "services": {
+      "drilling": "Drilling",
+      "wells": "Drilled Wells",
+      "pumps": "Heat Pump Boreholes",
+      "exploration": "Exploration Holes",
+      "observation": "Observation Holes",
+      "geology": "Geological Drilling",
+      "cooperation": "Cooperation",
+      "work": "Job Offers"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Feel free to contact us. We will be happy to answer all your questions regarding our services.",
+    "labels": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "E-mail",
+      "name": "Full Name",
+      "company": "Company Name",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "e.g., John Smith",
+      "company": "e.g., JPJ Project LLC",
+      "email": "e.g., john.smith@example.com",
+      "phone": "+00 000 000 000",
+      "message": "How can we help you? Describe your request briefly."
+    },
+    "button": "Send Message",
+    "errors": {
+      "required": "This field is required",
+      "email": "Invalid email address",
+      "send_error": "Sending error. Please try again."
+    },
+    "success": {
+      "title": "Sent!",
+      "message": "Thank you for contacting us. We will get back to you as soon as possible."
+    }
+  },
+  "footer": {
+    "office_title": "Office Details",
+    "company_title": "Company Details",
+    "shipping_title": "Shipping Details",
+    "contact_title": "Contact",
+    "address_office": "59 Zagórska St.",
+    "city_office": "25-344 Kielce, Poland",
+    "address_company": "63/13 J. Nowaka Jeziorańskiego St.",
+    "city_company": "25-432 Kielce",
+    "po_box": "PO Box 846",
+    "copy": "© JPJ Multi-branch Enterprise Jan Paweł Jarosiński - 2026"
+  },
+  "slider": {
+    "slide1": {
+      "title": "Professional Drilling Services",
+      "subtitle": "Over 20 years of experience and hundreds of successful projects.",
+      "cta": "Our Offer"
+    },
+    "slide2": {
+      "title": "Modern Machinery Park",
+      "subtitle": "Top-class equipment for all terrain conditions.",
+      "cta": "See Machines"
+    },
+    "slide3": {
+      "title": "Quality and Trust Guarantee",
+      "subtitle": "We build on solid foundations and reliable work.",
+      "cta": "Contact Us"
+    }
+  },
+  "info": {
+    "title": "About JPJ Enterprise",
+    "intro": "JPJ is a specialized drilling company with many years of experience. We implement advanced geotechnical and geological projects for private and industrial sectors.",
+    "mission_h": "Mission and Objective",
+    "mission_p": "Providing precise soil data and energy solutions through innovative drilling technologies while maintaining the highest safety standards.",
+    "values_h": "Corporate Values",
+    "values_list": [
+      "Engineering precision",
+      "Punctuality",
+      "Occupational safety",
+      "Environmental protection"
+    ],
+    "history_h": "Market Experience",
+    "history_p": "Since its founding by Jan Paweł Jarosiński, JPJ has completed over 500 drilling projects nationwide, constantly modernizing its machinery park.",
+    "services_h": "Core Areas of Activity",
+    "services_list": [
+      "Geological drilling",
+      "Heat pumps (source drilling)",
+      "Piezometry and monitoring",
+      "Soil bearing capacity tests"
+    ],
+    "future_h": "Development and Technology",
+    "future_p": "We invest in drilling systems with reduced noise and pollution emissions, adapting to increasing EU environmental requirements."
+  },
+  "contlink": {
+    "question": "Have questions?",
+    "link": "Contact us!",
+    "support": "We will be happy to provide support and help answer any questions regarding your investment."
+  },
+  "realizations": {
+    "subtitle": "Project Portfolio",
+    "title": "Our Realizations",
+    "back": "Back to list",
+    "details_btn": "Project details",
+    "desc_title": "Investment description",
+    "specs_title": "Technical Information",
+    "location": "Location",
+    "category": "Category",
+    "date": "Completion date",
+    "status": "Status",
+    "status_val": "Completed",
+    "cta": "Ask for a quote",
+    "help_title": "Have questions? Contact us!",
+    "help_desc": "We will be happy to provide support and help resolve any doubts regarding your investment."
+  },
+  "projects": {
+    "p1": {
+      "title": "Deep well drilling for an industrial plant",
+      "location": "Kielce, Poland",
+      "description": "Execution of a professional water intake with a depth of 85m. The project included pump selection and installation of pressure tanks.",
+      "category": "Drilled Wells",
+      "date": "December 2023"
+    },
+    "p2": {
+      "title": "Ground source for heat pumps – office building",
+      "location": "Krakow, Poland",
+      "description": "Comprehensive execution of 12 vertical boreholes, 100m each. Double-pipe probes were used for maximum thermal efficiency.",
+      "category": "Heat Pumps",
+      "date": "November 2023"
+    },
+    "p3": {
+      "title": "Geotechnical investigations for a logistics hall",
+      "location": "Radom, Poland",
+      "description": "Series of exploratory drillings and static CPTU soundings to determine the strength parameters of the ground for foundations.",
+      "category": "Geology",
+      "date": "October 2023"
+    },
+    "p4": {
+      "title": "Installation of monitoring piezometer network",
+      "location": "Warsaw, Poland",
+      "description": "Execution of observation boreholes for continuous monitoring of groundwater quality at a former landfill site.",
+      "category": "Piezometers",
+      "date": "September 2023"
+    },
+    "p5": {
+      "title": "Exploratory borehole for thermal water",
+      "location": "Busko-Zdrój, Poland",
+      "description": "Deep exploratory drilling with full coring to analyze the potential of geothermal waters in the region.",
+      "category": "Exploration Boreholes",
+      "date": "August 2023"
+    }
+  },
+  "machine_page": {
+    "title": "Machine Park",
+    "subtitle": "Professional Equipment",
+    "power": "Engine power",
+    "depth": "Application",
+    "weight": "Total weight",
+    "help_title": "Have questions? Contact us!",
+    "help_desc": "We will be happy to provide support and help answer any questions regarding your investment."
+  },
+  "machines": {
+    "m1": {
+      "name": "Beretta T44",
+      "type": "Crawler Drill Rig",
+      "description": "Specialized rig for complex vertical boreholes.",
+      "power": "115 HP",
+      "depth": "Vertical drilling",
+      "weight": "6,500 kg"
+    },
+    "m2": {
+      "name": "ZiL-131",
+      "type": "Drill Truck",
+      "description": "Mobile drilling unit ideal for heavy-duty terrain work.",
+      "power": "150 HP",
+      "depth": "Deep wells",
+      "weight": "10,500 kg"
+    },
+    "m3": {
+      "name": "MAN TGS 6x6",
+      "type": "Heavy Transport",
+      "description": "Vehicle for transporting drill rigs and consumables.",
+      "power": "440 HP",
+      "depth": "Machine logistics",
+      "weight": "26,000 kg"
+    },
+    "m4": {
+      "name": "Iveco Eurocargo",
+      "type": "Transport & Service",
+      "description": "Technical support vehicle carrying drilling equipment.",
+      "power": "220 HP",
+      "depth": "Equipment transport",
+      "weight": "12,000 kg"
+    },
+    "m5": {
+      "name": "Atlas Copco XAS",
+      "type": "Compressor",
+      "description": "High-pressure compressor for DTH drilling methods.",
+      "power": "120 kW",
+      "depth": "Drilling support",
+      "weight": "2,200 kg"
+    }
+  },
+  "services": {
+    "common": {
+      "about_service": "About service",
+      "why_us": "Why choose us?",
+      "process_title": "How we work (Stages)",
+      "quick_contact": "Quick contact",
+      "contact_desc": "Our experts will answer your questions within 24 hours."
+    },
+    "wiercenie": {
+      "title": "Drilling",
+      "description": "We provide professional drilling services using modern Beretta and ZiL rigs. We execute projects in all terrain conditions.",
+      "benefits": [
+        "High precision",
+        "Modern equipment",
+        "Experienced staff",
+        "HSE safety standards"
+      ],
+      "steps": [
+        "Technical consultation",
+        "Site preparation",
+        "Drilling process",
+        "Post-completion documentation"
+      ]
+    },
+    "studnie": {
+      "title": "Drilled wells",
+      "description": "We build efficient deep wells for single-family houses, agriculture, and industry. We guarantee access to clean water.",
+      "benefits": [
+        "Water independence",
+        "High flow rates",
+        "Pump selection",
+        "Long well lifespan"
+      ],
+      "steps": [
+        "Site inspection",
+        "Borehole drilling",
+        "Filter installation",
+        "Cleaning pumping"
+      ]
+    },
+    "pompy-ciepla": {
+      "title": "Heat pump boreholes",
+      "description": "We execute vertical ground heat exchangers. This is the most stable and efficient energy source for your heating.",
+      "benefits": [
+        "Energy savings",
+        "Eco-friendly",
+        "Thermal stability",
+        "Leak-proof guarantee"
+      ],
+      "steps": [
+        "Geological project",
+        "Drilling works",
+        "Probe installation",
+        "Pressure test and filling"
+      ]
+    },
+    "otwory-poszukiwawcze": {
+      "title": "Exploration boreholes",
+      "description": "Specialized drilling for resource exploration, thermal waters, or deep structure geological mapping.",
+      "benefits": [
+        "Full coring",
+        "Laboratory analysis",
+        "Measurement accuracy",
+        "Specialized rigs"
+      ],
+      "steps": [
+        "Archive analysis",
+        "Exploratory drilling",
+        "Sampling",
+        "Final expert report"
+      ]
+    },
+    "piezometry": {
+      "title": "Piezometers",
+      "description": "We install piezometer networks for monitoring groundwater levels and quality in industrial sites and landfills.",
+      "benefits": [
+        "Environmental monitoring",
+        "Regulatory compliance",
+        "Durability",
+        "Professional service"
+      ],
+      "steps": [
+        "Monitoring network design",
+        "Drilling and assembly",
+        "Head protection",
+        "Baseline measurements"
+      ]
+    },
+    "geologia": {
+      "title": "Geological drilling",
+      "description": "We investigate the ground for construction. We perform drillings and soundings essential for safe foundation design.",
+      "benefits": [
+        "Load-bearing analysis",
+        "Lab testing",
+        "Fast execution",
+        "Licensed geologists"
+      ],
+      "steps": [
+        "Drilling plan",
+        "Fieldwork",
+        "Soil analysis",
+        "Geotechnical documentation"
+      ]
+    },
+    "wspolpraca": {
+      "title": "Cooperation offers",
+      "description": "We invite construction companies, design offices, and institutional investors to cooperate. We offer subcontracting services.",
+      "benefits": [
+        "Attractive terms",
+        "Business partnership",
+        "Equipment support",
+        "B2B experience"
+      ],
+      "steps": [
+        "Contact",
+        "Terms negotiation",
+        "Contract signing",
+        "Project realization"
+      ]
+    },
+    "praca": {
+      "title": "Career",
+      "description": "Join the JPJ team! We are looking for rig operators, assistants, and geologists. We offer stable employment.",
+      "benefits": [
+        "Stable salary",
+        "Professional training",
+        "Modern tools",
+        "Good atmosphere"
+      ],
+      "steps": [
+        "CV submission",
+        "Interview",
+        "Trial day",
+        "Employment"
+      ]
+    }
+  }
+}

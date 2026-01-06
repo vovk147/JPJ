@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import "./KontaktPage.scss";
 
-const _CHAT_ID = "-4576936406";
-const _TG_TOKEN_BOT = "7547107911:AAH6szYXUcprhMoyW_NCCwT_IiYI0e0Bz7c";
+// Переменные для Telegram (убедись, что они есть в твоем .env)
+const _CHAT_ID = process.env.REACT_APP_TG_CHAT_ID;
+const _TG_TOKEN_BOT = process.env.REACT_APP_TG_TOKEN;
 const _TG_URL = `https://api.telegram.org/bot${_TG_TOKEN_BOT}/sendMessage`;
 
 async function sendData(message) {
@@ -16,112 +20,180 @@ async function sendData(message) {
                 parse_mode: "HTML"
             }),
         });
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         return await response.json();
     } catch (error) {
         console.error('Error sending message:', error);
-        alert('Failed to send message. Please try again.');
+        throw error;
     }
 }
 
 const KontaktPage = () => {
+    const { t, i18n } = useTranslation();
     const [name, setName] = useState('');
     const [company, setCompany] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
+    const [status, setStatus] = useState(null);
+
+    const getCountryCode = (lang) => {
+        switch (lang) {
+            case 'pl': return 'pl';
+            case 'de': return 'de';
+            case 'en': return 'gb';
+            default: return 'pl';
+        }
+    };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const msg = `Forma ze strony\n\nName: ${name}\nFirma: ${company}\nEmail: ${email}\nNumer: ${phone}\n\nWiadomość: ${message}`;
+        const dateTime = new Date().toLocaleString('pl-PL', {
+            day: '2-digit', month: '2-digit', year: 'numeric',
+            hour: '2-digit', minute: '2-digit'
+        });
+
+        const msg = `
+<b>📥 NOWE ZAPYTANIE: JPJ-Project</b>
+─────────────────────
+<b>👤 Klient:</b> ${name}
+<b>🏢 Firma:</b> ${company || '—'}
+<b>📧 E-mail:</b> <code>${email}</code>
+<b>📱 Telefon:</b> <code>+${phone}</code>
+─────────────────────
+<b>📝 Wiadomość:</b>
+<i>${message}</i>
+─────────────────────
+<b>📅 Data:</b> ${dateTime}
+        `;
 
         try {
             await sendData(msg);
-            alert("Thank you for sending the form");
+            setStatus('success');
+            setName(''); setCompany(''); setEmail(''); setPhone(''); setMessage('');
         } catch (error) {
-            alert("Failed to send the form. Please try again.");
+            setStatus('error');
         }
-
-        setName('');
-        setCompany('');
-        setEmail('');
-        setPhone('');
-        setMessage('');
+        setTimeout(() => setStatus(null), 6000);
     };
 
     return (
-        <main>
-            <section id="contact">
-                <h2>Skontaktuj się z nami</h2>
-                <p>Chcesz dowiedzieć się więcej o naszej ofercie lub masz pytania? Jesteśmy tutaj, aby Ci pomóc! Wypełnij poniższy formularz, napisz do nas na adres e-mail lub zadzwoń.<br />
-                    Czekamy na Twój kontakt!</p>
-                <ul className="contact-info">
-                    <li><strong>Adres e-mail:</strong> <a href="mailto:biuro@jpj.pl">biuro@jpj.pl</a></li>
-                    <li><strong>Numer telefonu:</strong> <a href="tel:+48791121323">+48-791-121-323</a></li>
-                </ul>
-                <form onSubmit={handleSubmit} method="post" className="contact-form">
-                    <div className="form-group">
-                        <label htmlFor="name">Imię i nazwisko:</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Wprowadź swoje imię i nazwisko"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            required
-                        />
+        <main className="kontakt-page-premium">
+            {status && (
+                <div className={`notification-toast ${status}`}>
+                    <div className="toast-inner">
+                        <div className="toast-icon">{status === 'success' ? '✓' : '!'}</div>
+                        <div className="toast-content">
+                            <h5>{status === 'success' ? t('contact.success.title') : t('contact.errors.send_error')}</h5>
+                            <p>{status === 'success' ? t('contact.success.message') : t('contact.errors.send_error')}</p>
+                        </div>
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="company">Nazwa firmy (opcjonalnie):</label>
-                        <input
-                            type="text"
-                            id="company"
-                            name="company"
-                            placeholder="Wprowadź nazwę firmy"
-                            value={company}
-                            onChange={(e) => setCompany(e.target.value)}
-                        />
+                </div>
+            )}
+
+            <section className="kontakt-hero">
+                <div className="container">
+                    <span className="subtitle">{t('header.contact')}</span>
+                    <h1>{t('contact.title')}</h1>
+                    <div className="accent-bar"></div>
+                </div>
+            </section>
+
+            <section className="kontakt-main-grid">
+                <div className="container">
+                    <div className="main-wrapper">
+                        
+                        {/* ЛЕВАЯ ЧАСТЬ: ИНДУСТРИАЛЬНЫЙ БЛОК */}
+                        <aside className="kontakt-sidebar">
+                            <div className="sidebar-content">
+                                <div className="sidebar-header">
+                                    <h3>{t('footer.company_title')}</h3>
+                                    <div className="small-bar"></div>
+                                </div>
+                                <div className="contact-blocks">
+                                    <div className="block">
+                                        <label>{t('footer.office_title')}</label>
+                                        <p>{t('footer.address_office')}</p>
+                                        <p>{t('footer.city_office')}</p>
+                                    </div>
+                                    <div className="block">
+                                        <label>{t('contact.labels.phone')}</label>
+                                        <a href="tel:+48791121323" className="big-link">+48 791 121 323</a>
+                                        <p className="sub">{t('contact.days')}: 08:00 - 16:00</p>
+                                    </div>
+                                    <div className="block">
+                                        <label>{t('contact.labels.email')}</label>
+                                        <a href="mailto:biuro@jpj.pl" className="big-link">biuro@jpj.pl</a>
+                                    </div>
+                                </div>
+                                <div className="sidebar-footer">
+                                    <p>NIP: 9591280386</p>
+                                    <p>REGON: 260144574</p>
+                                </div>
+                            </div>
+                        </aside>
+
+                        {/* ПРАВАЯ ЧАСТЬ: ПРОФЕССИОНАЛЬНАЯ ФОРМА */}
+                        <div className="form-container">
+                            <form className="industrial-form" onSubmit={handleSubmit}>
+                                <div className="form-grid">
+                                    <div className="form-group">
+                                        <label htmlFor="name">{t('contact.labels.name')}</label>
+                                        <input 
+                                            type="text" id="name" required 
+                                            value={name} onChange={(e) => setName(e.target.value)}
+                                            placeholder={t('contact.placeholders.name')} 
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="company">{t('contact.labels.company')}</label>
+                                        <input 
+                                            type="text" id="company" 
+                                            value={company} onChange={(e) => setCompany(e.target.value)}
+                                            placeholder={t('contact.placeholders.company')}
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="email">{t('contact.labels.email')}</label>
+                                        <input 
+                                            type="email" id="email" required 
+                                            value={email} onChange={(e) => setEmail(e.target.value)}
+                                            placeholder={t('contact.placeholders.email')}
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label>{t('contact.labels.phone')}</label>
+                                        <PhoneInput
+                                            country={getCountryCode(i18n.language)}
+                                            value={phone}
+                                            onChange={phone => setPhone(phone)}
+                                            containerClass="phone-container-pro"
+                                            inputClass="phone-input-pro"
+                                            buttonClass="phone-flag-pro"
+                                            placeholder={t('contact.placeholders.phone')}
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="form-group full-width">
+                                    <label htmlFor="message">{t('contact.labels.message')}</label>
+                                    <textarea 
+                                        id="message" required rows="8"
+                                        value={message} onChange={(e) => setMessage(e.target.value)}
+                                        placeholder={t('contact.placeholders.message')}
+                                    ></textarea>
+                                </div>
+
+                                <button type="submit" className="pro-submit">
+                                    <span>{t('contact.button')}</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="email">Adres e-mail:</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Wprowadź swój adres e-mail"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="phone">Numer telefonu:</label>
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            placeholder="Wprowadź numer telefonu"
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="message">Wiadomość:</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="5"
-                            placeholder="Wprowadź swoją wiadomość"
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
-                            required
-                        ></textarea>
-                    </div>
-                    <button type="submit">Wyślij</button>
-                </form>
+                </div>
             </section>
         </main>
     );

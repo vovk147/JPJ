@@ -1,55 +1,97 @@
-main {
+$jpj-blue: #0A6E9D;
+$text-dark: #1a1a1a;
+$gray-border: #e0e0e0;
+
+.about-company-wrapper {
+    width: 100%;
+    background-color: #f5f5f5; 
+    padding: 60px 0;
     display: flex;
     justify-content: center;
-    background-color: #f2f2f2;
 
-    .about-us {
-        margin-block: 50px;
-        max-width: 1200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 50px;
-        background-color: #fff;
-        padding: 40px;
-        border-radius: 10px;
-        background: #fff;
-        padding: 40px;
-        border-radius: 20px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        animation: fadeInUp 1s ease-in-out;
+    .about-card {
+        width: 100%;
+        max-width: 1140px;
+        background-color: #ffffff;
+        padding: 50px;
+        border: 1px solid $gray-border;
+        margin: 0 20px;
 
-        .container {
-
+        .about-header {
+            margin-bottom: 40px;
             h1 {
-                font-size: 36px;
-                text-align: center;
+                font-size: 28px;
+                font-weight: 800;
+                color: $text-dark;
+                text-transform: uppercase;
+                margin: 0 0 10px 0;
+            }
+            .line-accent {
+                width: 50px;
+                height: 4px;
+                background-color: $jpj-blue;
+            }
+        }
+
+        .about-main-body {
+            .intro-paragraph {
+                font-size: 17px;
+                line-height: 1.6;
+                color: #333;
+                font-weight: 600;
+                margin-bottom: 40px;
+                padding-bottom: 30px;
+                border-bottom: 1px solid #f0f0f0;
             }
 
             h2 {
-                color: #005a8a;
-                margin-bottom: 20px;
-                font-size: 1.75em;
-                border-bottom: 2px solid #005a8a;
-                padding-bottom: 5px;
-                border-left: 5px solid #005a8a;
-                padding-left: 10px;
-                animation: fadeInLeft 1s ease-in-out;
+                font-size: 18px;
+                font-weight: 700;
+                color: $jpj-blue;
+                text-transform: uppercase;
+                margin: 30px 0 15px 0;
+                border-left: 4px solid $jpj-blue;
+                padding-left: 12px;
             }
 
-            @keyframes fadeInLeft {
-                0% {
-                    opacity: 0;
-                    transform: translateX(-20px);
-                }
+            p {
+                font-size: 15px;
+                line-height: 1.7;
+                color: #555;
+            }
 
-                100% {
-                    opacity: 1;
-                    transform: translateX(0);
+            .about-grid {
+                display: grid;
+                grid-template-columns: 1.2fr 1fr;
+                gap: 50px;
+                @media (max-width: 850px) { grid-template-columns: 1fr; }
+            }
+
+            .about-bullet-list {
+                list-style: none;
+                padding: 0;
+                li {
+                    font-size: 15px;
+                    color: #444;
+                    padding-left: 20px;
+                    position: relative;
+                    margin-bottom: 8px;
+                    &::before {
+                        content: "—";
+                        position: absolute;
+                        left: 0;
+                        color: $jpj-blue;
+                    }
                 }
             }
         }
 
+        .about-footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid $gray-border;
+            display: flex;
+            justify-content: center;
+        }
     }
 }

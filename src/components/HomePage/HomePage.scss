@@ -1,9 +1,11 @@
-main{
-   max-width: 100vw;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   background-color: white;
+main {
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column; 
+    // УДАЛИЛИ justify-content: center
+    // УДАЛИЛИ align-items: center
+    background-color: white;
+    margin: 0;
+    padding: 0;
 }
-

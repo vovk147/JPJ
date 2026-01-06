@@ -1,0 +1,92 @@
+$jpj-blue: #0A6E9D;
+$text-dark: #333;
+$transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+.service-detail-page {
+    padding-top: 90px;
+    background: #fff;
+
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 30px; }
+
+    .service-hero {
+        background: #f8f8f8; padding: 50px 0; border-bottom: 1px solid #ddd;
+        .top-nav-row {
+            display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;
+            .back-link {
+                display: flex; align-items: center; gap: 8px; text-decoration: none; color: $text-dark;
+                font-weight: 800; text-transform: uppercase; font-size: 12px;
+                svg { transition: transform 0.2s; }
+                &:hover { color: $jpj-blue; svg { transform: translateX(-4px); } }
+            }
+            .breadcrumb { font-size: 12px; color: #888; a { text-decoration: none; color: $jpj-blue; font-weight: 700; } }
+        }
+        h1 { font-size: clamp(26px, 5vw, 42px); font-weight: 900; text-transform: uppercase; margin: 0; }
+        .accent-bar { width: 60px; height: 5px; background: $jpj-blue; margin-top: 15px; }
+    }
+
+    .service-main-content { padding: 60px 0; }
+
+    .content-grid {
+        display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: start;
+    }
+
+    .modern-list {
+        list-style: none; padding: 0;
+        li {
+            padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: center;
+            &::before { content: "→"; color: $jpj-blue; font-weight: 900; margin-right: 12px; }
+            span { font-weight: 700; color: $text-dark; }
+        }
+    }
+
+    .visual-side {
+        position: sticky; top: 110px;
+        .image-wrapper { 
+            height: 380px; background: #eee; margin-bottom: 25px; border-radius: 4px; overflow: hidden;
+            img { width: 100%; height: 100%; object-fit: cover; }
+        }
+        .info-box {
+            background: $text-dark; color: #fff; padding: 35px; border-radius: 4px;
+            h4 { text-transform: uppercase; margin-bottom: 10px; }
+            .phone-link { color: #fff; text-decoration: none; font-size: 20px; font-weight: 900; &:hover { color: $jpj-blue; } }
+        }
+    }
+
+    .process-section {
+        margin-top: 60px; padding-top: 60px; border-top: 1px solid #eee;
+        .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+        .step-card {
+            background: #fdfdfd; padding: 25px; border: 1px solid #eee;
+            .step-num { font-size: 32px; font-weight: 900; color: rgba($jpj-blue, 0.1); margin-bottom: 10px; }
+            p { font-weight: 800; font-size: 14px; color: $text-dark; }
+        }
+    }
+
+    .service-footer-cta {
+        padding: 40px 0 100px;
+        .cta-box {
+            background: #fdfdfd; border: 1px solid #eee; border-top: 3px solid $jpj-blue;
+            padding: 40px 20px; text-align: center; max-width: 850px; margin: 0 auto;
+            h2 { font-size: 22px; margin-bottom: 10px; }
+            p { font-size: 15px; color: #777; margin-bottom: 25px; }
+        }
+    }
+}
+
+// АДАПТИВ
+@media (max-width: 1100px) {
+    .service-detail-page {
+        .content-grid { grid-template-columns: 1fr; }
+        .visual-side { position: static; }
+        .process-section .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+}
+
+@media (max-width: 768px) {
+    .service-detail-page {
+        padding-top: 70px;
+        .container { padding: 0 20px; }
+        .top-nav-row { flex-direction: column; gap: 10px; align-items: flex-start; }
+        .process-section .steps-grid { grid-template-columns: 1fr; }
+    }
+}

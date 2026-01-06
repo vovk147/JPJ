@@ -1,0 +1,348 @@
+{
+  "header": {
+    "home": "Startseite",
+    "offer": "Angebot",
+    "park": "Maschinenpark",
+    "realizations": "Realisierungen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "services": {
+      "drilling": "Bohrung",
+      "wells": "Brunnenbohrung",
+      "pumps": "Erdwärmebohrungen",
+      "exploration": "Explorationsbohrungen",
+      "observation": "Beobachtungsbohrungen",
+      "geology": "Geologische Bohrungen",
+      "cooperation": "Kooperation",
+      "work": "Stellenangebote"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Kontaktieren Sie uns gerne. Wir beantworten gerne alle Ihre Fragen zu unseren Dienstleistungen.",
+    "labels": {
+      "address": "Adresse",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "name": "Vor- und Nachname",
+      "company": "Firmenname",
+      "message": "Nachricht"
+    },
+    "placeholders": {
+      "name": "z.B. Max Mustermann",
+      "company": "z.B. JPJ Project GmbH",
+      "email": "z.B. max@example.com",
+      "phone": "+00 000 000 000",
+      "message": "Wie können wir Ihnen helfen? Beschreiben Sie Ihre Anfrage kurz."
+    },
+    "button": "Nachricht senden",
+    "errors": {
+      "required": "Dieses Feld ist erforderlich",
+      "email": "Ungültige E-Mail-Adresse",
+      "send_error": "Fehler beim Senden. Bitte versuchen Sie es erneut."
+    },
+    "success": {
+      "title": "Gesendet!",
+      "message": "Vielen Dank für Ihre Nachricht. Wir werden uns so schnell wie möglich bei Ihnen melden."
+    }
+  },
+  "footer": {
+    "office_title": "Bürodaten",
+    "company_title": "Unternehmensdaten",
+    "shipping_title": "Versanddaten",
+    "contact_title": "Kontakt",
+    "address_office": "Zagórska-Str. 59",
+    "city_office": "25-344 Kielce, Polen",
+    "address_company": "J. Nowaka Jeziorańskiego-Str. 63/13",
+    "city_company": "25-432 Kielce",
+    "po_box": "Postfach 846",
+    "copy": "© Mehrspartenunternehmen JPJ Jan Paweł Jarosiński - 2026"
+  },
+  "slider": {
+    "slide1": {
+      "title": "Professionelle Bohrungen",
+      "subtitle": "Über 20 Jahre Erfahrung und hunderte erfolgreiche Projekte.",
+      "cta": "Unser Angebot"
+    },
+    "slide2": {
+      "title": "Moderner Maschinenpark",
+      "subtitle": "Erstklassige Ausrüstung für alle Geländebedingungen.",
+      "cta": "Maschinen ansehen"
+    },
+    "slide3": {
+      "title": "Qualitäts- und Vertrauensgarantie",
+      "subtitle": "Wir bauen auf soliden Fundamenten und zuverlässiger Arbeit.",
+      "cta": "Kontaktieren Sie uns"
+    }
+  },
+  "info": {
+    "title": "Über das Unternehmen JPJ",
+    "intro": "JPJ ist ein spezialisiertes Bohrunternehmen mit langjähriger Erfahrung. Wir realisieren anspruchsvolle geotechnische und geologische Projekte für Privat- und Industriesektoren.",
+    "mission_h": "Mission und Ziel",
+    "mission_p": "Bereitstellung präziser Boden- und Energielösungen durch innovative Bohrtechnologien unter Einhaltung höchster Sicherheitsstandards.",
+    "values_h": "Unternehmenswerte",
+    "values_list": [
+      "Ingenieurtechnische Präzision",
+      "Termintreue",
+      "Arbeitssicherheit",
+      "Umweltschutz"
+    ],
+    "history_h": "Markterfahrung",
+    "history_p": "Seit der Gründung durch Jan Paweł Jarosiński hat JPJ über 500 Bohrprojekte landesweit abgeschlossen und modernisiert ständig den Maschinenpark.",
+    "services_h": "Hauptgeschäftsbereiche",
+    "services_list": [
+      "Geologische Bohrungen",
+      "Wärmepumpen (Quellenbohrung)",
+      "Piezometrie und Überwachung",
+      "Baugrunduntersuchungen"
+    ],
+    "future_h": "Entwicklung und Technologie",
+    "future_p": "Wir investieren in Bohrsysteme mit reduzierten Lärm- und Schadstoffemissionen und passen uns den wachsenden EU-Umweltanforderungen an."
+  },
+  "contlink": {
+    "question": "Haben Sie Fragen?",
+    "link": "Kontaktieren Sie uns!",
+    "support": "Gerne unterstützen wir Sie und beantworten alle Fragen zu Ihrer Investition."
+  },
+  "realizations": {
+    "subtitle": "Projektportfolio",
+    "title": "Unsere Realisierungen",
+    "back": "Zurück zur Liste",
+    "details_btn": "Projektdetails",
+    "desc_title": "Investitionsbeschreibung",
+    "specs_title": "Technische Informationen",
+    "location": "Standort",
+    "category": "Kategorie",
+    "date": "Abschlussdatum",
+    "status": "Status",
+    "status_val": "Abgeschlossen",
+    "cta": "Angebot anfordern",
+    "help_title": "Haben Sie Fragen? Kontaktieren Sie uns!",
+    "help_desc": "Gerne unterstützen wir Sie und helfen Ihnen, alle Zweifel an Ihrer Investition zu zerstreuen."
+  },
+  "projects": {
+    "p1": {
+      "title": "Tiefbrunnenbohrung für eine Industrieanlage",
+      "location": "Kielce, Polen",
+      "description": "Ausführung einer professionellen Wasserentnahme mit einer Tiefe von 85m. Das Projekt umfasste die Pumpenauswahl und die Installation von Druckbehältern.",
+      "category": "Bohrbrunnen",
+      "date": "Dezember 2023"
+    },
+    "p2": {
+      "title": "Erdwärmequelle für Wärmepumpen – Bürogebäude",
+      "location": "Krakau, Polen",
+      "description": "Umfassende Ausführung von 12 vertikalen Bohrungen à 100m. Für maximale Effizienz wurden Doppelrohrsonden eingesetzt.",
+      "category": "Wärmepumpen",
+      "date": "November 2023"
+    },
+    "p3": {
+      "title": "Geotechnische Untersuchungen für eine Logistikhalle",
+      "location": "Radom, Polen",
+      "description": "Serienmäßige Erkundungsbohrungen und statische CPTU-Sondierungen zur Bestimmung der Festigkeitsparameter des Baugrunds.",
+      "category": "Geologie",
+      "date": "Oktober 2023"
+    },
+    "p4": {
+      "title": "Installation eines Überwachungs-Piezometernetzes",
+      "location": "Warschau, Polen",
+      "description": "Ausführung von Beobachtungsbohrungen zur ständigen Überwachung der Grundwasserqualität auf einer ehemaligen Deponie.",
+      "category": "Piezometer",
+      "date": "September 2023"
+    },
+    "p5": {
+      "title": "Erkundungsbohrung auf der Suche nach Thermalwasser",
+      "location": "Busko-Zdrój, Polen",
+      "description": "Tiefe Erkundungsbohrung mit vollständiger Kernentnahme zur Analyse des Potenzials von Geothermalwasser in der Region.",
+      "category": "Erkundungsbohrungen",
+      "date": "August 2023"
+    }
+  },
+  "machine_page": {
+    "title": "Maschinenpark",
+    "subtitle": "Professionelle Ausrüstung",
+    "power": "Motorleistung",
+    "depth": "Anwendung",
+    "weight": "Gesamtgewicht",
+    "help_title": "Haben Sie Fragen? Kontaktieren Sie uns!",
+    "help_desc": "Gerne unterstützen wir Sie und helfen Ihnen, alle Zweifel an Ihrer Investition zu zerstreuen."
+  },
+  "machines": {
+    "m1": {
+      "name": "Beretta T44",
+      "type": "Raupenbohrgerät",
+      "description": "Spezialbohrgerät für komplexe Vertikalbohrungen.",
+      "power": "115 PS",
+      "depth": "Vertikalbohrungen",
+      "weight": "6.500 kg"
+    },
+    "m2": {
+      "name": "ZiL-131",
+      "type": "Bohrwagen",
+      "description": "Mobile Bohreinheit, ideal für Arbeiten in schwerem Gelände.",
+      "power": "150 PS",
+      "depth": "Tiefbrunnen",
+      "weight": "10.500 kg"
+    },
+    "m3": {
+      "name": "MAN TGS 6x6",
+      "type": "Schwertransport",
+      "description": "Fahrzeug zum Transport von Bohrgeräten und Verbrauchsmaterialien.",
+      "power": "440 PS",
+      "depth": "Maschinenlogistik",
+      "weight": "26.000 kg"
+    },
+    "m4": {
+      "name": "Iveco Eurocargo",
+      "type": "Transport & Service",
+      "description": "Technisches Supportfahrzeug für Bohrausrüstung.",
+      "power": "220 PS",
+      "depth": "Ausrüstungstransport",
+      "weight": "12.000 kg"
+    },
+    "m5": {
+      "name": "Atlas Copco XAS",
+      "type": "Kompresor",
+      "description": "Hochdruckkompressor für DTH-Bohrverfahren.",
+      "power": "120 kW",
+      "depth": "Bohrunterstützung",
+      "weight": "2.200 kg"
+    }
+  },
+  "services": {
+    "common": {
+      "about_service": "Über den Service",
+      "why_us": "Warum wir?",
+      "process_title": "Wie wir arbeiten (Etappen)",
+      "quick_contact": "Schneller Kontakt",
+      "contact_desc": "Unsere Experten beantworten Ihre Fragen innerhalb von 24 Stunden."
+    },
+    "wiercenie": {
+      "title": "Bohren",
+      "description": "Wir bieten professionelle Bohrdienstleistungen mit modernen Beretta- und ZiL-Geräten an. Wir arbeiten unter allen Bedingungen.",
+      "benefits": [
+        "Hohe Präzision",
+        "Moderne Ausrüstung",
+        "Erfahrenes Personal",
+        "Sicherheitsstandards"
+      ],
+      "steps": [
+        "Technische Beratung",
+        "Standortvorbereitung",
+        "Bohrprozess",
+        "Dokumentation"
+      ]
+    },
+    "studnie": {
+      "title": "Bohrbrunnen",
+      "description": "Wir bauen effiziente Tiefbrunnen für Haushalte, Landwirtschaft und Industrie. Wir garantieren Zugang zu sauberem Wasser.",
+      "benefits": [
+        "Wasserunabhängigkeit",
+        "Hohe Ergiebigkeit",
+        "Pumpenauswahl",
+        "Lange Lebensdauer"
+      ],
+      "steps": [
+        "Besichtigung",
+        "Bohrung",
+        "Filterinstallation",
+        "Reinigungspumpen"
+      ]
+    },
+    "pompy-ciepla": {
+      "title": "Erdwärmebohrungen",
+      "description": "Wir führen vertikale Erdwärmetauscher aus. Dies ist die effizienteste Energiequelle für Ihre Heizung.",
+      "benefits": [
+        "Energieersparnis",
+        "Umweltfreundlich",
+        "Thermische Stabilität",
+        "Dichtheitsgarantie"
+      ],
+      "steps": [
+        "Geologisches Projekt",
+        "Bohrarbeiten",
+        "Sondeninstallation",
+        "Druckprüfung"
+      ]
+    },
+    "otwory-poszukiwawcze": {
+      "title": "Erkundungsbohrungen",
+      "description": "Spezialbohrungen zur Rohstofferkundung, Thermalwasser oder geologische Kartierung tiefer Strukturen.",
+      "benefits": [
+        "Kernbohrung",
+        "Laboranalyse",
+        "Messgenauigkeit",
+        "Spezialbohrgeräte"
+      ],
+      "steps": [
+        "Archivanalyse",
+        "Erkundungsbohrung",
+        "Probenahme",
+        "Abschlussgutachten"
+      ]
+    },
+    "piezometry": {
+      "title": "Piezometer",
+      "description": "Wir installieren Piezometernetze zur Überwachung der Grundwasserqualität an Industriestandorten.",
+      "benefits": [
+        "Umweltüberwachung",
+        "Normkonformität",
+        "Langlebigkeit",
+        "Profi-Service"
+      ],
+      "steps": [
+        "Netzwerkdesign",
+        "Bohrung und Montage",
+        "Kopfschutz",
+        "Erstmessungen"
+      ]
+    },
+    "geologia": {
+      "title": "Geologische Bohrungen",
+      "description": "Baugrunduntersuchung für Bauvorhaben. Wir führen Bohrungen und Sondierungen für sichere Fundamente durch.",
+      "benefits": [
+        "Tragfähigkeitsanalyse",
+        "Labortests",
+        "Schnelle Ausführung",
+        "Geologen"
+      ],
+      "steps": [
+        "Bohrplan",
+        "Feldarbeit",
+        "Bodenanalyse",
+        "Geotechnische Berichte"
+      ]
+    },
+    "wspolpraca": {
+      "title": "Zusammenarbeit",
+      "description": "Wir laden Bauunternehmen und Planungsbüros zur Zusammenarbeit ein. Wir bieten Subunternehmerleistungen an.",
+      "benefits": [
+        "Attraktive Konditionen",
+        "Partnerschaft",
+        "Geräte-Support",
+        "B2B-Erfahrung"
+      ],
+      "steps": [
+        "Kontakt",
+        "Verhandlung",
+        "Vertragsunterzeichnung",
+        "Realisierung"
+      ]
+    },
+    "praca": {
+      "title": "Karriere",
+      "description": "Werden Sie Teil des JPJ-Teams! Wir suchen Bohrgeräteführer, Helfer und Geologen.",
+      "benefits": [
+        "Stabiles Gehalt",
+        "Berufsschulung",
+        "Moderne Werkzeuge",
+        "Gutes Klima"
+      ],
+      "steps": [
+        "CV-Einreichung",
+        "Interview",
+        "Probetag",
+        "Einstellung"
+      ]
+    }
+  }
+}

@@ -1,308 +1,220 @@
-// Переменные
-$header-bg-color: #ebebeb;
-$header-bg-scrolled-color: #d0d0d0;
-$header-text-color: #333;
-$header-hover-color: #0A6E9D;
-$logo-width: 150px;
-$menu-bg-color: #ebebeb;
-$menu-hover-color: #0A6E9D;
-$dropdown-bg-color: #fff;
-$dropdown-border-color: #ddd;
-$dropdown-padding: 10px 15px;
-$burger-bar-bg-color: #333;
-$burger-bar-hover-bg-color: #000;
-$transition-speed: 0.3s;
+// --- ПЕРЕМЕННЫЕ ---
+$header-bg: #ebebeb;
+$header-scrolled: #f5f5f5;
+$jpj-blue: #0A6E9D; // Твой основной синий
+$text-dark: #333;
+$text-gray: #888;   // Профессиональный серый для неактивных кнопок
+$transition: 0.2s ease-in-out;
 
 header {
-    background-color: $header-bg-color;
-    color: $header-text-color;
-    padding: 15px 0;
+    background-color: $header-bg;
+    padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
-    transition: all $transition-speed ease;
-
-    
+    left: 0;
+    z-index: 10000;
+    transition: all $transition;
+    font-family: 'Roboto', Arial, sans-serif;
 
     &.scrolled {
-        background-color: $header-bg-scrolled-color;
+        background-color: rgba($header-scrolled, 0.98);
+        padding: 8px 0;
     }
 
     .container {
-        max-width: 1440px;
+        max-width: 1600px;
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 0 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
 
-    .logo {
-        img {
-            width: $logo-width;
-            transition: transform $transition-speed ease;
-
-            &:hover {
-                transform: scale(1.1) rotate(-5deg);
-            }
-        }
+    .logo img {
+        width: clamp(120px, 8vw, 150px);
+        height: auto;
+        display: block;
     }
 
-    nav#top-menu {
-        display: flex;
-        align-items: center;
-        transition: opacity $transition-speed ease;
-
-        &.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: row;
-
-            li {
-                margin: 0 20px;
-                position: relative;
-
-                .link {
-                    color: $header-text-color;
-                    text-decoration: none;
-                    font-weight: bold;
-                    padding: 10px;
-                    display: block;
-                    transition: color $transition-speed ease;
-                    position: relative;
-
-                    .flex {
-                        display: flex;
-                        flex: 1;
-                    }
-
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
-                        height: 3px;
-                        width: 100%;
-                        background-color: $menu-hover-color;
-                        transform: scaleX(0);
-                        transition: transform $transition-speed ease;
-                        transform-origin: bottom right;
-                    }
-
-                    &:hover {
-                        color: $menu-hover-color;
-
-                        &::after {
-                            transform: scaleX(1);
-                        }
-                    }
-
-                    .arrow {
-                        display: inline-block;
-                        margin-left: 8px;
-                        border: solid $header-text-color;
-                        border-width: 0 2px 2px 0;
-                        padding: 3px;
-                        transform: rotate(45deg);
-                        transition: transform $transition-speed ease;
-                    }
-
-                    &.open .arrow {
-                        transform: rotate(-135deg);
-                    }
-                }
-
-                .dropdown {
-                    display: none;
-                    list-style: none;
-                    position: absolute;
-                    left: 0;
-                    top: calc(100% + 5px);
-                    background-color: $dropdown-bg-color;
-                    border: 1px solid $dropdown-border-color;
-                    padding: $dropdown-padding;
-                    min-width: 200px;
-                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                    border-radius: 10px;
-
-                    
-                }
-
-                &.open .dropdown {
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
-        }
-    }
-
-    .menu-toggle {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-
-        .bar {
-            background-color: $burger-bar-bg-color;
-            height: 3px;
-            width: 30px;
-            margin: 3px 0;
-            transition: all $transition-speed ease;
-        }
-
-        &.active {
-            .bar {
-                &:nth-child(1) {
-                    transform: rotate(45deg) translate(5px, 6px);
-                }
-
-                &:nth-child(2) {
-                    opacity: 0;
-                }
-
-                &:nth-child(3) {
-                    transform: rotate(-45deg) translate(5px, -6px);
-                }
-            }
-        }
-    }
-
-    .language-switcher {
+    .header-right {
         display: flex;
         align-items: center;
         gap: 20px;
+        order: 3;
+    }
 
-        select {
+    // --- ЯЗЫКИ (АКЦЕНТ НА ПОДЧЕРКИВАНИИ) ---
+    .language-switcher {
+        display: flex;
+        align-items: center;
+
+        // Мобильный селект: синий, округлый, без тени
+        .mobile-select {
             display: none;
-            font-size: 17px;
-            padding: 10px 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #005a8a;
-            color: white;
-            transition: border-color $transition-speed ease;
-            max-width: 150px;
+            background-color: $jpj-blue;
+            color: #ffffff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            outline: none;
+            box-shadow: none;
 
-            &:focus {
-                border-color: #007bff;
-                outline: none;
+            option {
+                background-color: #ffffff;
+                color: #333333;
+            }
+
+            @media (max-width: 1100px) {
+                display: block;
             }
         }
 
-        .lang-btn {
-            position: relative;
-            font-size: 14px;
-            padding: 10px 20px;
-            border: none;
-            background-color: #0A6E9D;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color $transition-speed ease;
-            color: white;
+        // Кнопки для ПК: профессиональный серый + жирное синее подчеркивание
+        .desktop-buttons {
+            display: flex;
+            gap: 10px;
 
-            &.active {
-                background-color: #005a8a;
+            @media (max-width: 1100px) {
+                display: none;
             }
 
-            &:not(.active) {
-                background-color: #0A6E9D;
+            button {
+                background: transparent;
+                color: $text-gray; // Неактивные — серые
+                border: none;
+                border-bottom: 3px solid transparent; // Резервируем место под полоску
+                padding: 5px 10px;
+                font-size: 15px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all $transition;
+
+                &.active {
+                    color: $jpj-blue; // Активная — синяя
+                    border-bottom: 3px solid $jpj-blue; // Жирная полоса снизу
+                    font-weight: 800;
+                }
+
+                &:hover:not(.active) {
+                    color: $jpj-blue;
+                }
             }
         }
     }
 
-    @media (max-width: 1100px) {
-        .menu-toggle {
+    // --- НАВИГАЦИЯ ---
+    nav#top-menu {
+        order: 2;
+        ul {
             display: flex;
-        }
+            list-style: none;
+            margin: 0;
+            padding: 0;
 
-        nav#top-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            background-color: $menu-bg-color;
-            position: fixed;
-            top: 60px; // Adjust this if needed to match header height
-            left: 0;
-            max-height: calc(100vh - 60px); // Make sure menu takes full screen height minus header height
-            opacity: 0;
-            transition: opacity $transition-speed ease;
-            z-index: 1000;
-            overflow-y: auto; // Ensure content can scroll if it's taller than the screen
+            li {
+                position: relative;
+                margin: 0 5px;
 
-            &.active {
-                display: flex;
-                opacity: 1;
-            }
+                .link {
+                    color: $text-dark;
+                    text-decoration: none;
+                    font-weight: 700;
+                    padding: 10px 15px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 15px;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
 
-            ul {
-                flex-direction: column;
-                align-items: center;
-                padding: 0;
-                width: 100%;
-                margin: 0;
+                    &:hover { color: $jpj-blue; }
 
-                li {
-                    width: 100%;
-                    text-align: center;
-                    border-bottom: 1px solid #ddd;
-
-                    .link {
-                        padding: 15px;
-                        display: block;
-                    }
-
-                    .dropdown {
-                        display: none;
-                        list-style: none;
-                        background-color: $dropdown-bg-color;
-                        border: 1px solid $dropdown-border-color;
-                        padding: 0;
-                        position: static;
-                        width: 100%;
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                        text-align: center;
-
-                        li {
-                            padding: 0;
-                            margin: 0;
-
-                            .link {
-                                display: block;
-                                padding: 12px 20px;
-                                color: $header-text-color;
-                                text-decoration: none;
-                                transition: background-color $transition-speed ease;
-                            }
-                        }
-                    }
-
-                    &.open .dropdown {
-                        display: flex;
-                        flex-direction: column;
+                    .arrow {
+                        margin-left: 7px;
+                        border: solid $text-dark;
+                        border-width: 0 2px 2px 0;
+                        padding: 2.5px;
+                        transform: rotate(45deg);
                     }
                 }
             }
         }
 
-        .language-switcher {
-            select {
-                display: block;
-            }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 270px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 8px 0;
+            &.show { display: flex; flex-direction: column; }
 
-            .lang-btn {
-                display: none;
+            li {
+                border-bottom: 1px solid #f2f2f2;
+                .link { padding: 12px 20px; font-weight: 500; font-size: 14px; }
             }
         }
     }
 
-    &:hover {
-        background-color: #d0d0d0;
+    // --- МОНИТОР 27" (УВЕЛИЧЕНИЕ) ---
+    @media (min-width: 1600px) {
+        padding: 15px 0;
+        nav#top-menu ul li .link { font-size: 17px; }
+        .language-switcher .desktop-buttons button { 
+            font-size: 16px; 
+            padding: 8px 15px; 
+        }
+    }
+
+    // --- БУРГЕР ---
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        .bar { width: 26px; height: 3px; background: $text-dark; transition: $transition; }
+        &.active {
+            .bar:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+            .bar:nth-child(2) { opacity: 0; }
+            .bar:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+        }
+    }
+
+    // --- МОБИЛЬНОЕ МЕНЮ ---
+    @media (max-width: 1100px) {
+        .menu-toggle { display: flex; }
+        nav#top-menu {
+            position: fixed;
+            top: 60px;
+            left: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: calc(100vh - 60px);
+            background: $header-bg;
+            border-right: 1px solid #ddd;
+            transition: left 0.4s ease;
+            display: block;
+            overflow-y: auto;
+
+            &.active { left: 0; }
+
+            ul {
+                flex-direction: column;
+                li .link { padding: 18px 20px; font-size: 16px; justify-content: space-between; }
+            }
+            .dropdown-menu {
+                position: static;
+                display: none;
+                &.show { display: flex; background: rgba(0,0,0,0.02); }
+                li .link { padding-left: 35px; }
+            }
+        }
     }
 }
